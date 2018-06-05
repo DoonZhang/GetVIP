@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="GetVIP.Views.FeedBack"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GetVIP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="RootGrid" Background="#FF273154">
+        <Image Source="ms-appx:///Assets/Image/BackGround.jpg"/>
+        <AppBarButton Icon="Back"  Click="Back_Click"/>
+
+        <TextBlock Margin="0,20,0,0" TextWrapping="Wrap" Text="反馈和建议" VerticalAlignment="Top" Height="48" d:LayoutOverrides="LeftPosition, RightPosition" FontSize="48" HorizontalAlignment="Center"/>
+        <TextBlock Margin="0,120,0,0" TextWrapping="Wrap" FontSize="25" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Center" TextAlignment="Center">
+            <Run Text="     您有什么反馈和建议，请及时和我们联系，反馈前请点击下方的登录按钮登录"/>
+            <Run Text="后点击打开反馈页面"/>
+            <Run Text="，以便我们及时回复。"/>
+            <LineBreak/>
+            <LineBreak/>1.点击“快捷登陆”。
+            <LineBreak/>2.点击“打开反馈页面”，进去发送自己需要反馈的内容。
+            <LineBreak/>
+            <LineBreak/>*点击“查看开发者回复”可以看到回复数量，如有回复请点击“打开反馈页面”
+        </TextBlock>
+
+
+        <StackPanel HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="0,200,0,0">
+            <Button x:Uid="FastLoginButton"                  
+                    Click="FastLoginButton_Click" Content="快捷登录" BorderThickness="0" HorizontalAlignment="Center" FontSize="20" />
+            <Button x:Uid="OpenFeedbackWindowButton"                   
+                    Click="OpenFeedbackWindowButton_Click" Content="打开反馈页面" BorderThickness="0" HorizontalAlignment="Center" FontSize="20" Margin="0,10,0,0" />
+            <Button x:Uid="GetDeveloperReplyCountButton"                  
+                    Click="GetDeveloperReplyCountButton_Click" Content="查看开发者回复" BorderThickness="0" HorizontalAlignment="Center" FontSize="20" Margin="0,10,0,0" />
+        </StackPanel>
+
+
+
+
+    </Grid>
+</Page>

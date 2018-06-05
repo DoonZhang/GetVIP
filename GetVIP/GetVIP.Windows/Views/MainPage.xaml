@@ -1,0 +1,395 @@
+﻿<Page
+    x:Class="GetVIP.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GetVIP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid x:Name="Root_Grid" Background="#FF273154">
+        <Image Source="ms-appx:///Assets/Image/BackGround.jpg"/>
+            <WebView Source="http://s.moreplay.cn/index.php?c=home" Opacity="0" Width="0" Height="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Hub Header="会员通">
+            
+            <Hub.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0,-30,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Text="{Binding}" FontSize="60" Margin="5,10,0,0"/>
+                            <StackPanel HorizontalAlignment="Right" Margin="500,0,0,0">
+                                <TextBlock Text="关注微信公众号，随时查看最新账号！" HorizontalAlignment="Center" FontSize="18"/>
+                                <Image Source="ms-appx:///Assets/Image/Others/wx.jpg" Width="100" Height="100" Margin="0,10,0,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel x:Name="InfoControl" Orientation="Horizontal" Margin="20,-30,0,0" Loaded="InfoControl_Loaded">
+                            <Image Height="20" Width="20" Source="ms-appx:///Assets/Image/Others/Info.png"/>
+                            <TextBlock x:Name="Info" Height="20" FontSize="18" FontFamily="Arial" Margin="15,0,0,0" Loaded="Info_Loaded"/>
+                            <Image Height="20" Width="20" Source="ms-appx:///Assets/Image/Others/Close.png" Tapped="Image_Tapped"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </Hub.HeaderTemplate>
+            <!--视频分类-->
+            <HubSection Header="视频" >
+                <HubSection.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Margin="5,0" Text="{Binding}" FontSize="40"/>
+                    </DataTemplate>
+                </HubSection.HeaderTemplate>
+                <DataTemplate>
+                    <ListView>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="Iqiyi_Click"  Height="100" Width="250" BorderThickness="0" >
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/iqiyilogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image x:Name="Iqiyi_Hot" Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image x:Name="Iqiyi_New" Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="YouKu_Click"  Height="100" Width="250" BorderThickness="0">
+
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/youkulogo.png"/>
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="QQLive_Click" Height="100" Width="250"  BorderThickness="0" >
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/qqlogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="MangGuo_Click" Height="100" Width="250"  BorderThickness="0" >
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/hunantvlogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="PPTV_Click" Height="100" Width="250"  BorderThickness="0" >
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/pptvlogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="KanKan_Click" Height="100" Width="250"  BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/kankanlogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="LeShi_Click" Height="100" Width="250"  BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/letvlogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="SouHu_Click" Height="100" Width="250"  BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/sohulogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="BaoFeng_Click" Height="100" Width="250"  BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/baofenglogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                        </StackPanel>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+            <!--音乐分类-->
+            <HubSection Header="音乐">
+                <HubSection.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Margin="5,0" Text="{Binding}" FontSize="40"/>
+                    </DataTemplate>
+                </HubSection.HeaderTemplate>
+                <DataTemplate>
+                    <ListView >
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="WangYiYun_Click" Height="100" Width="250"  BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/wangyiyunlogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="QQMusic_Click" Height="100" Width="250"  BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/qqmusiclogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="XiaMi_Click" Height="100" Width="250"  BorderThickness="0" >
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/xiamilogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="KuGou_Click" Height="100" Width="250"  BorderThickness="0">
+                                    <Button.Background>
+                                        <!---->
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/kugoulogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="KuWo_Click" Height="100" Width="250"  BorderThickness="0">
+                                    <Button.Background>
+                                        <!---->
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/kuwologo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="BaiduMusic_Click" Height="100" Width="250"  BorderThickness="0">
+                                    <Button.Background>
+                                        <!---->
+                                        <ImageBrush Stretch="None" ImageSource="baidumusiclogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                        </StackPanel>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+            <!--下载分类-->
+            <HubSection Header="下载">
+                <HubSection.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Margin="5,0" Text="{Binding}" FontSize="40"/>
+                    </DataTemplate>
+                </HubSection.HeaderTemplate>
+                <DataTemplate>
+                    <ListView>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="Thunder_Click"  Height="100" Width="150" BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="ms-appx:///Assets/Logo/Thunderlogo.png" Stretch="None"/>
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>                          
+                                                   
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="BaiduYun_Click" Height="100" Width="150"  BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/baiduyunlogo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png"/>
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                            </StackPanel>
+                        </StackPanel>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+            <!--其他分类-->
+            <HubSection Header="其他">
+                <HubSection.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Margin="5,0" Text="{Binding}" FontSize="40"/>
+                    </DataTemplate>
+                </HubSection.HeaderTemplate>
+                <DataTemplate>
+                    <ListView >
+                        <StackPanel>
+                          
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="BaiduWenku_Click" Height="100" Width="150"  BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush Stretch="None" ImageSource="ms-appx:///Assets/Logo/baiduwenku.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                        </StackPanel>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+            <!--软件推荐-->
+            <HubSection Header="软件推荐">
+                <HubSection.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Margin="5,0" Text="{Binding}" FontSize="40"/>
+                    </DataTemplate>
+                </HubSection.HeaderTemplate>
+                                       
+                <DataTemplate>
+                    <ListView>
+                        <StackPanel>
+                            <!--乐享-->
+                            <StackPanel Orientation="Horizontal">
+                                <Button Click="LeShare_Click" Height="100" Width="300"  BorderThickness="0">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="ms-appx:///Assets/App/LeShare.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image x:Name="LeShare_Hot" Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image x:Name="LeShare_New" Source="ms-appx:///Assets/Image/Others/New.png" />
+                            </StackPanel>
+                            
+                            <StackPanel Orientation="Horizontal">
+                             
+                                <Button Click="MorePlayVideo_Click" Height="100" Width="300"  BorderThickness="0">
+                                    <Button.Background>
+                                       
+                                        <ImageBrush ImageSource="ms-appx:///Assets/App/MorePlayVideo.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Hot.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/New.png"  />
+                            </StackPanel>
+                            
+                                                        <!--   <StackPanel Orientation="Horizontal">
+                                <Button Click="Hexagon_Click" Height="100" Width="300"  BorderThickness="0">
+                                    <Button.Background>
+                                        
+                                        <ImageBrush ImageSource="ms-appx:///Assets/App/Hexagon.png" />
+                                    </Button.Background>
+                                </Button> 
+                    
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/Blank.png"  />
+                            </StackPanel>
+                        -->
+
+                                                        <!--Shift游戏-->
+
+                                                     
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <Button Click="Shift_Click" Height="100" Width="300"  BorderThickness="0">
+                                                                <Button.Background>
+                                                                    <ImageBrush ImageSource="ms-appx:///Assets/App/Shift.png" />
+                                                                </Button.Background>
+                                                            </Button>
+                                                            <Image x:Name="Shift_Hot" Source="ms-appx:///Assets/Image/Others/Hot.png" />
+
+                                                            <Image x:Name="Shift_New" Source="ms-appx:///Assets/Image/Others/New.png" />
+
+                                                        </StackPanel>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <Button Click="ClearSquare_Click" Height="100" Width="300"  BorderThickness="0">
+                                                                <Button.Background>
+                                                                    <!---->
+                                        <ImageBrush ImageSource="ms-appx:///Assets/App/ClearSquare.png" />
+                                    </Button.Background>
+                                </Button>
+                                <Image Source="ms-appx:///Assets/Image/Others/Blank.png" />
+                                <Image  Source="ms-appx:///Assets/Image/Others/New.png"  />
+                            </StackPanel>                                               
+                        </StackPanel>                                          
+                    </ListView>                                  
+                </DataTemplate>                                
+            </HubSection>
+            <!--功能-->
+            <HubSection Header="功能">
+                                            <HubSection.HeaderTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Margin="5,0" Text="{Binding}" FontSize="40"/>
+                                                </DataTemplate>
+                                            </HubSection.HeaderTemplate>
+
+                                            <DataTemplate>
+                                                <StackPanel Margin="38,0,-0.333,0.333" >
+
+                                                    <StackPanel Orientation="Horizontal" Height="90">
+                                                        <Image Source="ms-appx:///Assets/Image/Button/Notice.png" Height="45"/>
+                                                        <Ellipse x:Name="Tips" Width="8" Margin="0,0,-5,0" Height="8" Fill="Red" VerticalAlignment="Top" HorizontalAlignment="Right" Loaded="Tips_Loaded" />
+                                                        <Button Content="公告" Click="Notice_Click" BorderThickness="0"/>
+                                                        <TextBlock x:Name="TipNum" Loaded="TipNum_Loaded"/>
+                                                    </StackPanel>
+                                                    <StackPanel Orientation="Horizontal" Height="90">
+                                                        <Image Source="ms-appx:///Assets/Image/Button/Comments.png" Height="45"/>
+                                                        <Button Content="留言板" Click="Comments_Click" BorderThickness="0"/>
+                                                    </StackPanel>
+                                                    <StackPanel Orientation="Horizontal" Height="90">
+                                                        <Image Source="ms-appx:///Assets/Image/Button/Message.png" Height="45"/>
+                                                        <Button Content=" 反馈" Click="FeedBack_Click" BorderThickness="0"/>
+                                                    </StackPanel>
+                                                    <StackPanel Orientation="Horizontal" Height="90">
+                                                        <Image Source="ms-appx:///Assets/Image/Button/Assess.png" Height="45"/>
+                                                        <Button Content="五星好评" Click="Assess_Click" BorderThickness="0"/>
+                                                    </StackPanel>
+
+                                                    <StackPanel Orientation="Horizontal" Height="90">
+                                                        <Image Source="ms-appx:///Assets/Image/Button/Tag.png" Height="45"/>
+                                                        <Button Content="提醒（测试功能）" BorderThickness="0">
+                                                            <Button.Flyout>
+                                                                <Flyout>
+                                                                    <StackPanel>
+                                                                        <TextBlock x:Name="name" TextAlignment="Center" >
+                                                是否打开未来一周的推送提醒？
+                                                <LineBreak/>注意：一周后自动取消，一周只可点击一次"确认"，否则会造成重复提醒！"
+                                                                        </TextBlock>
+                                                                        <Button  Content=" 确定" Click="Ture_Click" HorizontalAlignment="Center" />
+                                                                    </StackPanel>
+                                                                </Flyout>
+                                                            </Button.Flyout>
+                                                        </Button>
+                                                    </StackPanel>
+                                                    <!--   <StackPanel Orientation="Horizontal">
+                            <Image Source="ms-appx:///Assets/Image/Button/Settings.png" Height="45"/>
+                            <Button Content="设置" Click="Setting_Click" BorderThickness="0"/>
+                        </StackPanel>
+                         <StackPanel Orientation="Horizontal">
+                            <Image Source="ms-appx:///Assets/Image/Button/Settings.png" Height="45"/>
+                            <Button Content="" Click="Setting_Click" BorderThickness="0"/>
+                        </StackPanel>
+-->
+                                                </StackPanel>
+                 </DataTemplate>
+   </HubSection>
+        </Hub>
+
+    </Grid>
+</Page>

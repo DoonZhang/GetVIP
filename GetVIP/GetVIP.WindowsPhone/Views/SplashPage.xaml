@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="GetVIP.Views.SplashPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GetVIP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Image/BackGround.jpg"/>
+    </Page.Background>
+    <Grid>
+        <WebView x:Name="ad" Opacity="0"/>
+        <TextBlock x:Name="time" VerticalAlignment="Top" HorizontalAlignment="Right" Foreground="#FF31E8CF" Margin="0,20,20,0" FontSize="12"/>
+    </Grid>
+</Page>

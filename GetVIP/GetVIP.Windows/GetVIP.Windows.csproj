@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C298AA27-065E-4112-9377-653468510464}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GetVIP</RootNamespace>
+    <AssemblyName>GetVIP.Windows</AssemblyName>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>GetVIP.Windows_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>E4B5623B338F6FE75767C64FF3597BC283FFC4AA</PackageCertificateThumbprint>
+    <AppxBundle>Auto</AppxBundle>
+    <AppxPackageDir>E:\VS生成包\会员通\Windows 8.1\</AppxPackageDir>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Views\ADPage.xaml.cs">
+      <DependentUpon>ADPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppFlyouts\AboutFlyout.xaml.cs">
+      <DependentUpon>AboutFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppFlyouts\HelpFlyout.xaml.cs">
+      <DependentUpon>HelpFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppFlyouts\PrivacyFlyout.xaml.cs">
+      <DependentUpon>PrivacyFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FeedBack.xaml.cs">
+      <DependentUpon>FeedBack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GuidePage.xaml.cs">
+      <DependentUpon>GuidePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\SplashPage.xaml.cs">
+      <DependentUpon>SplashPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WebPage.xaml.cs">
+      <DependentUpon>WebPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="GetVIP.Windows_StoreKey.pfx" />
+    <None Include="GetVIP.Windows_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\App\ClearSquare.png" />
+    <Content Include="Assets\App\Hexagon.png" />
+    <Content Include="Assets\App\iCall.png" />
+    <Content Include="Assets\App\LeShare.png" />
+    <Content Include="Assets\App\MorePlayVideo.png" />
+    <Content Include="Assets\App\Shift.png" />
+    <Content Include="Assets\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\BadgeLogo.scale-140.png" />
+    <Content Include="Assets\BadgeLogo.scale-180.png" />
+    <Content Include="Assets\HTML\getvip\common\av-min-1.0.0.js" />
+    <Content Include="Assets\HTML\getvip\common\realtime.browser.js" />
+    <Content Include="Assets\HTML\getvip\common\style.css" />
+    <Content Include="Assets\HTML\getvip\common\typed-messages.js" />
+    <Content Include="Assets\HTML\getvip\menu\aiqiyi\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\aiqiyi\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\baiduyun\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\baiduyun\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\baofeng\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\baofeng\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\comment\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\comment\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\kankan\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\kankan\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\kugou\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\kugou\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\kuwo\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\kuwo\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\leshi\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\leshi\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\mangguo\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\mangguo\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\pptv\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\pptv\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\qqlive\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\qqlive\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\qqmusic\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\qqmusic\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\souhu\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\souhu\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\thunder\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\thunder\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\wangyi\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\wangyi\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\wenku\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\wenku\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\xiami\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\xiami\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\xuanfeng\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\xuanfeng\test.js" />
+    <Content Include="Assets\HTML\getvip\menu\youku\index.html" />
+    <Content Include="Assets\HTML\getvip\menu\youku\test.js" />
+    <Content Include="Assets\Image\BackGround.png" />
+    <Content Include="Assets\Image\BackGround.jpg" />
+    <Content Include="Assets\Image\Button\Assess.png" />
+    <Content Include="Assets\Image\Button\Comments.png" />
+    <Content Include="Assets\Image\Button\Enter.png" />
+    <Content Include="Assets\Image\Button\Files.png" />
+    <Content Include="Assets\Image\Button\Home.png" />
+    <Content Include="Assets\Image\Button\Information.png" />
+    <Content Include="Assets\Image\Button\Message.png" />
+    <Content Include="Assets\Image\Button\More.png" />
+    <Content Include="Assets\Image\Button\Node.png" />
+    <Content Include="Assets\Image\Button\Notice.png" />
+    <Content Include="Assets\Image\Button\Palette.png" />
+    <Content Include="Assets\Image\Button\Settings.png" />
+    <Content Include="Assets\Image\Button\Shield.png" />
+    <Content Include="Assets\Image\Button\Store.png" />
+    <Content Include="Assets\Image\Button\Tag.png" />
+    <Content Include="Assets\Image\Guide\1.png" />
+    <Content Include="Assets\Image\Guide\2.png" />
+    <Content Include="Assets\Image\Guide\3.png" />
+    <Content Include="Assets\Image\Guide\4.png" />
+    <Content Include="Assets\Image\Others\zfb_hb.png" />
+    <Content Include="Assets\Image\Others\Blank.png" />
+    <Content Include="Assets\Image\Others\Close.png" />
+    <Content Include="Assets\Image\Others\Hot.png" />
+    <Content Include="Assets\Image\Others\Info.png" />
+    <Content Include="Assets\Image\Others\New.png" />
+    <Content Include="Assets\Image\Others\wx.jpg" />
+    <Content Include="Assets\Image\Others\wx_zsm.jpg" />
+    <Content Include="Assets\Image\Others\zfb_fk.jpg" />
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Logo.scale-140.png" />
+    <Content Include="Assets\Logo.scale-180.png" />
+    <Content Include="Assets\Logo.scale-80.png" />
+    <Content Include="Assets\Logo\163logo.png" />
+    <Content Include="Assets\Logo\1905logo.png" />
+    <Content Include="Assets\Logo\56logo.png" />
+    <Content Include="Assets\Logo\6logo.png" />
+    <Content Include="Assets\Logo\baiduwenku.png" />
+    <Content Include="Assets\Logo\baiduyunlogo.png" />
+    <Content Include="Assets\Logo\baofenglogo.png" />
+    <Content Include="Assets\Logo\baomihualogo.png" />
+    <Content Include="Assets\Logo\cntvlogo.png" />
+    <Content Include="Assets\Logo\EveryPiano.png" />
+    <Content Include="Assets\Logo\hunantvlogo.png" />
+    <Content Include="Assets\Logo\ifenglogo.png" />
+    <Content Include="Assets\Logo\iqiyilogo.png" />
+    <Content Include="Assets\Logo\kankanlogo.png" />
+    <Content Include="Assets\Logo\kankannewslogo.png" />
+    <Content Include="Assets\Logo\ku6logo.png" />
+    <Content Include="Assets\Logo\kugoulogo.png" />
+    <Content Include="Assets\Logo\kuwologo.png" />
+    <Content Include="Assets\Logo\letvlogo.png" />
+    <Content Include="Assets\Logo\mtimelogo.png" />
+    <Content Include="Assets\Logo\pptvlogo.png" />
+    <Content Include="Assets\Logo\qqlogo.png" />
+    <Content Include="Assets\Logo\qqmusiclogo.png" />
+    <Content Include="Assets\Logo\sinalogo.png" />
+    <Content Include="Assets\Logo\sohulogo.png" />
+    <Content Include="Assets\Logo\tangdoulogo.png" />
+    <Content Include="Assets\Logo\Thunderlogo.png" />
+    <Content Include="Assets\Logo\tudoulogo.png" />
+    <Content Include="Assets\Logo\wangyiyunlogo.png" />
+    <Content Include="Assets\Logo\wasulogo.png" />
+    <Content Include="Assets\Logo\xiamilogo.png" />
+    <Content Include="Assets\Logo\xuanfenglogo.png" />
+    <Content Include="Assets\Logo\yinyuetailogo.png" />
+    <Content Include="Assets\Logo\youkulogo.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-140.png" />
+    <Content Include="Assets\SmallLogo.scale-180.png" />
+    <Content Include="Assets\SmallLogo.scale-80.png" />
+    <Content Include="Assets\SmallLogo.targetsize-16.png" />
+    <Content Include="Assets\SmallLogo.targetsize-256.png" />
+    <Content Include="Assets\SmallLogo.targetsize-32.png" />
+    <Content Include="Assets\SmallLogo.targetsize-48.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-140.png" />
+    <Content Include="Assets\SplashScreen.scale-180.png" />
+    <Content Include="Assets\Square310x310Logo.scale-100.png" />
+    <Content Include="Assets\Square310x310Logo.scale-140.png" />
+    <Content Include="Assets\Square310x310Logo.scale-180.png" />
+    <Content Include="Assets\Square310x310Logo.scale-80.png" />
+    <Content Include="Assets\Square70x70Logo.scale-100.png" />
+    <Content Include="Assets\Square70x70Logo.scale-140.png" />
+    <Content Include="Assets\Square70x70Logo.scale-180.png" />
+    <Content Include="Assets\Square70x70Logo.scale-80.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-140.png" />
+    <Content Include="Assets\StoreLogo.scale-180.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-140.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-180.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-80.png" />
+    <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\ADPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppFlyouts\AboutFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppFlyouts\HelpFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppFlyouts\PrivacyFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FeedBack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GuidePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SplashPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WebPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="JYAnalyticsUniversal, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JyAnalytics.1.0.10\lib\netcore451\JYAnalyticsUniversal.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JyCloudTool, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JyCloud.1.0.5\lib\netcore451\JyCloudTool.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JyCloudToolForJySDK, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JyFeedBack.1.0.2.5\lib\netcore451\JyCloudToolForJySDK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JYUpdateSDK, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JyUpdateAndBulletinSDK.1.0.10\lib\netcore451\JYUpdateSDK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JyUserFeedback, Version=1.0.2.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JyFeedBack.1.0.2.5\lib\netcore451\JyUserFeedback.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JyUserInfo, Version=1.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JyUserInfoSdk.1.1.5\lib\netcore451\JyUserInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="VungleSDK, Version=5.1.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\VungleSDK.5.1.0\lib\win81\VungleSDK.winmd</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\NewFolder1\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="..\GetVIP.Shared\GetVIP.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
